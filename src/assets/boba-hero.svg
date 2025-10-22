@@ -1,0 +1,59 @@
+<svg width="800" height="700" viewBox="0 0 800 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="700" rx="28" fill="var(--hero-surface, #FFFFFF)"/>
+  <g filter="url(#f1)">
+    <circle cx="120" cy="120" r="120" fill="var(--hero-dot1, #F6E7D8)"/>
+  </g>
+  <g filter="url(#f2)">
+    <circle cx="760" cy="100" r="160" fill="var(--hero-dot2, #D8C3FF)"/>
+  </g>
+  <g filter="url(#f3)">
+    <circle cx="400" cy="660" r="180" fill="var(--hero-dot3, #B2F0E9)"/>
+  </g>
+
+  <!-- Cup body -->
+  <g transform="translate(230,120)">
+    <rect x="80" y="40" width="260" height="360" rx="24" fill="var(--surface, #F8F5FA)" stroke="var(--hero-stroke, #E8E2EA)" stroke-width="3"/>
+    <!-- Tea gradient -->
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="var(--hero-tea-top, #FBD4E4)"/>
+        <stop offset="100%" stop-color="var(--hero-tea-bottom, #F29BC0)"/>
+      </linearGradient>
+    </defs>
+    <rect x="92" y="120" width="236" height="240" rx="18" fill="url(#g1)"/>
+
+    <!-- Lid -->
+    <rect x="68" y="20" width="284" height="36" rx="12" fill="var(--surface, #FFFFFF)" stroke="var(--hero-stroke, #E8E2EA)" stroke-width="3"/>
+    
+    <!-- Straw -->
+    <rect x="202" y="-40" width="16" height="80" rx="8" fill="var(--hero-straw, #8CC5FF)"/>
+
+    <!-- Pearls -->
+    <circle cx="120" cy="320" r="16" fill="var(--hero-pearls, #3C2F2F)"/>
+    <circle cx="160" cy="340" r="14" fill="var(--hero-pearls, #3C2F2F)"/>
+    <circle cx="200" cy="330" r="16" fill="var(--hero-pearls, #3C2F2F)"/>
+    <circle cx="240" cy="350" r="15" fill="var(--hero-pearls, #3C2F2F)"/>
+    <circle cx="280" cy="330" r="16" fill="var(--hero-pearls, #3C2F2F)"/>
+    <circle cx="260" cy="310" r="13" fill="var(--hero-pearls, #3C2F2F)"/>
+    <circle cx="220" cy="355" r="13" fill="var(--hero-pearls, #3C2F2F)"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g opacity="0.6">
+    <circle cx="180" cy="220" r="6" fill="var(--hero-tea-bottom, #F29BC0)"/>
+    <circle cx="600" cy="180" r="6" fill="var(--hero-dot3, #B2F0E9)"/>
+    <circle cx="520" cy="520" r="6" fill="var(--hero-dot2, #D8C3FF)"/>
+  </g>
+
+  <defs>
+    <filter id="f1" x="-40" y="-40" width="320" height="320" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="f2" x="560" y="-100" width="400" height="400" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="f3" x="200" y="460" width="400" height="400" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+</svg>

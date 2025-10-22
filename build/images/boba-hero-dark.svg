@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Dark mode variant of the boba hero illustration -->
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Campus Tea — Dark Mode Boba Hero</title>
+  <desc id="desc">A stylized cup of bubble tea with a straw and tapioca pearls, designed for dark backgrounds.</desc>
+  <!-- Background glow -->
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2EE6D6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8A5CF6" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="cupGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2EE6D6"/>
+      <stop offset="100%" stop-color="#8A5CF6"/>
+    </linearGradient>
+    <linearGradient id="teaGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="600" fill="none"/>
+
+  <!-- Ambient glow ellipse -->
+  <ellipse cx="400" cy="300" rx="300" ry="220" fill="url(#g1)" filter="url(#blur)"/>
+
+  <!-- Straw -->
+  <rect x="380" y="60" width="40" height="220" rx="8" fill="#7C3AED"/>
+  <rect x="380" y="60" width="40" height="80" rx="8" fill="#22D3EE" opacity="0.65"/>
+
+  <!-- Cup outline -->
+  <g>
+    <path d="M260 160 H540 L520 520 C517 548 493 568 465 568 H335 C307 568 283 548 280 520 L260 160 Z" fill="#0B1020" stroke="url(#cupGrad)" stroke-width="4"/>
+    <!-- Cup lid -->
+    <rect x="240" y="140" width="320" height="30" rx="12" fill="#111827" stroke="#22D3EE" stroke-width="2"/>
+  </g>
+
+  <!-- Tea content -->
+  <path d="M290 230 H510 L495 500 C493 526 472 546 446 546 H354 C328 546 307 526 305 500 L290 230 Z" fill="url(#teaGrad)"/>
+
+  <!-- Pearls -->
+  <g fill="#0B1324">
+    <circle cx="335" cy="485" r="18"/>
+    <circle cx="370" cy="505" r="20"/>
+    <circle cx="410" cy="490" r="19"/>
+    <circle cx="450" cy="510" r="18"/>
+    <circle cx="480" cy="488" r="16"/>
+    <circle cx="360" cy="470" r="14"/>
+  </g>
+  <!-- Pearl highlights -->
+  <g fill="#22D3EE" opacity="0.45">
+    <circle cx="327" cy="478" r="4"/>
+    <circle cx="364" cy="498" r="4"/>
+    <circle cx="404" cy="484" r="4"/>
+    <circle cx="444" cy="504" r="4"/>
+    <circle cx="474" cy="482" r="4"/>
+  </g>
+
+  <!-- Boba logo mark on cup -->
+  <g>
+    <circle cx="400" cy="360" r="56" fill="#0B1020" stroke="#93C5FD" stroke-width="2"/>
+    <path d="M400 315 C428 315 451 338 451 366 C451 394 428 417 400 417 C372 417 349 394 349 366 C349 338 372 315 400 315 Z" fill="none" stroke="#2EE6D6" stroke-width="3"/>
+    <circle cx="380" cy="360" r="6" fill="#8A5CF6"/>
+    <circle cx="420" cy="360" r="6" fill="#22D3EE"/>
+    <rect x="392" y="344" width="16" height="32" rx="4" fill="#7C3AED" opacity="0.8"/>
+  </g>
+
+  <!-- Subtle sparkles -->
+  <g fill="#A78BFA" opacity="0.5">
+    <circle cx="220" cy="200" r="2"/>
+    <circle cx="190" cy="260" r="3"/>
+    <circle cx="610" cy="220" r="2"/>
+    <circle cx="590" cy="180" r="3"/>
+    <circle cx="620" cy="300" r="2"/>
+  </g>
+</svg>

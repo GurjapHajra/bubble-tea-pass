@@ -75,6 +75,8 @@ p { margin: 0 0 12px; color: var(--muted); }
 .nav a:hover { background: var(--surface-2); text-decoration: none; }
 .theme-toggle { border: 1px solid var(--border); background: var(--surface-2); color: var(--text); border-radius: 10px; padding: 6px 10px; cursor: pointer; }
 .theme-toggle:hover { filter: brightness(1.1); }
+/* Hidden by default; shown on phones */
+.menu-toggle { display: none; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); border-radius: 10px; padding: 6px 10px; cursor: pointer; }
 
 /* Footer */
 .site-footer {
@@ -151,16 +153,44 @@ form { display: grid; gap: 12px; max-width: 520px; }
 
 /* Section helpers */
 .section { padding: 36px 0; }
-.section.full { min-height: calc(100vh - var(--header-height)); display: grid; align-items: center; }
+.section { padding: 56px 0; }
 .hero, .section { scroll-margin-top: var(--header-height); }
 
-/* Scroll snap for full-page sections */
+/* Smooth anchor scroll */
 html { scroll-behavior: smooth; }
-body { scroll-snap-type: y proximity; }
-.hero.full, .section.full { scroll-snap-align: start; }
 .section h2 { margin-bottom: 12px; }
 .muted { color: var(--muted); }
 
 /* Subscribe embed */
 .embed { border: none; width: 100%; max-width: 560px; height: 640px; border-radius: 12px; box-shadow: 0 8px 22px var(--shadow); background: var(--surface); }
+
+@media (max-width: 800px) {
+	.section { padding: 40px 0; }
+}
+
+/* Tablet: <= 1024px */
+@media (max-width: 1024px) {
+	.container { padding: 20px; }
+	.site-header { padding: 12px 16px; }
+	.nav { gap: 10px; flex-wrap: wrap; }
+	.hero { padding: 48px 0 24px; }
+	.hero-grid { grid-template-columns: 1fr; gap: 16px; }
+	.hero-copy { text-align: center; }
+	.cta-row { justify-content: center; }
+	.hero-image { order: 2; }
+	.hero-copy h1 { font-size: 2rem; }
+}
+
+/* Phone: <= 640px */
+@media (max-width: 640px) {
+	.brand { font-size: 1rem; }
+	.menu-toggle { display: inline-flex; align-items: center; }
+	/* Collapse primary nav into a dropdown */
+	.nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--surface); border-bottom: 1px solid var(--border); padding: 10px 16px; gap: 8px; }
+	.nav.open { display: grid; grid-auto-rows: min-content; }
+	.nav a { display: block; padding: 10px 12px; border-radius: 8px; }
+	.btn { padding: 12px 16px; }
+	.cards { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+	.hero-copy h1 { font-size: 1.8rem; }
+}
 

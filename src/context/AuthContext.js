@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
             id: 'demo-user',
             name: email.split('@')[0],
             email,
-            drinksRemaining: 10,
+            drinksRemaining: 4,
         };
         localStorage.setItem('user', JSON.stringify(mockUser));
         setUser(mockUser);
@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
             id: 'demo-user',
             name: email.split('@')[0],
             email,
-            drinksRemaining: 10,
+            drinksRemaining: 4,
         };
         localStorage.setItem('user', JSON.stringify(mockUser));
         setUser(mockUser);

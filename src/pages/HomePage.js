@@ -1,35 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 
 const HomePage = () => {
+    const { theme } = useTheme();
+    const heroSrc = theme === 'dark' ? '/images/boba-hero-dark.svg' : '/images/boba-hero.svg';
     return (
         <div>
             {/* 1️⃣ Hero Section */}
                     <section className="hero full" id="hero">
                         <div className="hero-grid">
                             <div className="hero-copy">
-                                <span className="badge">Pilot Program</span>
-                                <h1>Your Daily Dose of Bubble Tea 🧋</h1>
-                                <p className="muted">Join the Campus Tea Pass — get up to 10 drinks a month for just $25.</p>
+                                                                <span className="badge">Pilot Program</span>
+                                                                <h1>Your Daily Dose of Bubble Tea 🧋</h1>
+                                                                    <p className="muted">Join the Campus Tea Pass — get 4 drinks a week for $30.</p>
                                 <div className="cta-row">
                                     <Link className="btn primary shadow" to="/coming-soon">Subscribe Now</Link>
                                     <a className="btn secondary" href="#how-it-works">Learn More</a>
                                 </div>
                             </div>
-                            <div className="hero-image">
-                                <img src="/images/boba-hero.svg" alt="Campus Tea signature drink" loading="eager" />
+                                        <div className="hero-image">
+                                            <img src={heroSrc} alt="Campus Tea signature drink" loading="eager" />
                             </div>
                         </div>
                     </section>
 
             {/* 2️⃣ How It Works */}
-            <section className="section full" id="how-it-works">
+            <section className="section" id="how-it-works">
                         <h2 className="section-title">How it works</h2>
                 <div className="cards">
                             <article className="card">
                                 <div className="icon-circle">📝</div>
                                 <h3>Subscribe</h3>
-                                <p className="muted">Join for $25 a month. Cancel anytime.</p>
+                                <p className="muted">Join for $30 a week. Cancel anytime.</p>
                             </article>
                             <article className="card">
                                 <div className="icon-circle">📱</div>
@@ -39,18 +42,18 @@ const HomePage = () => {
                             <article className="card">
                                 <div className="icon-circle">😊</div>
                                 <h3>Enjoy</h3>
-                                <p className="muted">Get up to 10 drinks every month — your boba budget, simplified!</p>
+                                <p className="muted">Get 4 drinks every week — your boba budget, simplified!</p>
                             </article>
                 </div>
             </section>
 
             {/* 3️⃣ What's Included */}
-            <section className="section full" id="included">
+            <section className="section" id="included">
                         <h2 className="section-title">What’s included</h2>
                         <div className="grid-2">
                             <div>
                                 <ul className="checklist">
-                                    <li><strong>10 drinks / month</strong> (regular size)</li>
+                                      <li><strong>4 drinks / week</strong> (regular size)</li>
                                     <li><strong>Classic flavors</strong> — milk tea, jasmine green, taro, more</li>
                                     <li><strong>Free toppings</strong> — pearls, pudding, aloe, lychee jelly</li>
                                     <li><strong>Member perks</strong> — 10% off snacks, early access drops</li>
@@ -72,15 +75,15 @@ const HomePage = () => {
             </section>
 
             {/* 4️⃣ Subscribe Section */}
-                    <section className="section full" id="subscribe">
+                    <section className="section" id="subscribe">
                                 <h2 className="section-title">Subscribe</h2>
                         <div className="pricing card" style={{ maxWidth: 520 }}>
                             <div className="price">
-                                <div className="amount">$25</div>
-                                <div className="per">/ month</div>
+                                <div className="amount">$30</div>
+                                <div className="per">/ week</div>
                             </div>
                             <ul className="checklist">
-                                <li>Up to 10 drinks every month</li>
+                                <li>4 drinks every week</li>
                                 <li>Free toppings included</li>
                                 <li>Member-only perks and drops</li>
                                 <li>Cancel anytime</li>
@@ -93,14 +96,14 @@ const HomePage = () => {
                     </section>
 
             {/* 5️⃣ Digital Pass / Redemption */}
-            <section className="section full" id="pass">
+            <section className="section" id="pass">
                         <h2 className="section-title">Digital Pass & Redemption</h2>
                         <div className="grid-2">
                             <div>
                                 <ol>
-                                    <li>Receive a QR code via email/text after checkout.</li>
-                                    <li>Show it at Campus Tea to redeem a drink.</li>
-                                    <li>Your balance (10 drinks / month) updates automatically.</li>
+                                                                        <li>Receive a QR code via email/text after checkout.</li>
+                                                                        <li>Show it at Campus Tea to redeem a drink.</li>
+                                                                            <li>Your balance (4 drinks / week) updates automatically.</li>
                                 </ol>
                                 <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginTop: 12, flexWrap: 'wrap' }}>
                                     <img
@@ -116,16 +119,16 @@ const HomePage = () => {
                             <div>
                                 <div className="pass-card card">
                                     <div className="pass-title">Campus Tea Pass</div>
-                                    <div className="pass-row"><span>Drinks remaining</span><strong>10</strong></div>
+                                    <div className="pass-row"><span>Drinks remaining</span><strong>4</strong></div>
                                     <div className="pass-row"><span>Member ID</span><strong>demo-user</strong></div>
-                                    <div className="pass-row"><span>Valid</span><strong>Monthly</strong></div>
+                                      <div className="pass-row"><span>Valid</span><strong>Weekly</strong></div>
                                 </div>
                             </div>
                         </div>
             </section>
 
             {/* 6️⃣ Testimonials */}
-                    <section className="section full" id="testimonials">
+                    <section className="section" id="testimonials">
                         <h2 className="section-title">Loved on campus</h2>
                 <div className="cards">
                             <article className="card">
@@ -143,7 +146,7 @@ const HomePage = () => {
             </section>
 
             {/* 7️⃣ Footer / Contact */}
-            <section className="section full" id="feedback">
+            <section className="section" id="feedback">
                 <h2>Contact us</h2>
                 <div className="cards">
                             <article className="card" style={{ maxWidth: 520 }}>
